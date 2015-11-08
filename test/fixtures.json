@@ -73,10 +73,22 @@
       }
     },
     "expected": [
-      2,
-      3,
-      4,
-      9
+      {
+        "txId": "aaa",
+        "vout": 1
+      },
+      {
+        "txId": "aaa",
+        "vout": 2
+      },
+      {
+        "txId": "aaa",
+        "vout": 3
+      },
+      {
+        "txId": "eee",
+        "vout": 0
+      }
     ]
   },
   {
@@ -128,7 +140,10 @@
       }
     },
     "expected": [
-      1
+      {
+        "txId": "aaa",
+        "vout": 0
+      }
     ]
   }
 ]
