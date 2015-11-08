@@ -22,7 +22,10 @@ module.exports = function deriveUTXO (transactions) {
     })
 
     transaction.outputs.forEach(function (output, vout) {
-      txOuts[txId + vout] = Object.assign({ txId, vout }, output)
+      txOuts[txId + vout] = Object.assign({
+        txId: txId,
+        vout: vout
+      }, output)
     })
   }
 
