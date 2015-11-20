@@ -40,10 +40,10 @@ let transactions = {
 }
 
 // equates all transaction outputs for where no matching input exists
-// double spends are ignored in the returned result, with priority given to first-seen
+// subsequent double spends are ignored in the returned result, with priority given to first-seen
 // txId and vout is extended onto the outputs for convenience (outputs are copied, not mutated)
 let unspents = utxo(transactions)
-// => [{
+[{
 	"txId": "2c20ca6ca3a2af32d3ca0c6c1a60f6d3c00101342620a21f3622fc6faf2ddcda",
 	"vout": 0,
 	"script": "..."
