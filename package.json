@@ -2,47 +2,29 @@
   "name": "utxo",
   "version": "2.0.2",
   "description": "UTXO derivation from a list of transactions",
-  "author": "Daniel Cousens",
-  "license": "ISC",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/dcousens/utxo.git"
   },
-  "bugs": {
-    "url": "https://github.com/dcousens/utxo/issues"
+  "scripts": {
+    "prepublish": "npm ls && npm run unit",
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "set -e; for t in test/*.js; do node $t; done"
   },
-  "homepage": "https://github.com/dcousens/utxo",
   "keywords": [
+    "transaction",
+    "unspent",
+    "output",
+    "txo",
     "utxo",
     "bitcoin"
   ],
-  "main": "index.js",
-  "scripts": {
-    "coverage": "mocha --require blanket -R travis-cov",
-    "coverage-local": "mocha --require blanket -R html-cov",
-    "standard": "standard",
-    "test": "npm run standard && npm run unit",
-    "unit": "mocha"
-  },
-  "config": {
-    "blanket": {
-      "pattern": [
-        ""
-      ],
-      "data-cover-never": [
-        "node_modules",
-        "test"
-      ]
-    },
-    "travis-cov": {
-      "threshold": 100
-    }
-  },
-  "dependencies": {},
+  "author": "Daniel Cousens",
+  "license": "ISC",
   "devDependencies": {
-    "blanket": "*",
-    "mocha": "*",
     "standard": "*",
-    "travis-cov": "*"
+    "tape": "^4.6.0"
   }
 }

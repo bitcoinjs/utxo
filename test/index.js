@@ -1,15 +1,11 @@
-/* global describe, it */
-
-var assert = require('assert')
+var test = require('tape')
 var deriveUTXO = require('../')
 var fixtures = require('./fixtures')
 
-describe('utxo', function () {
-  fixtures.forEach(function (f) {
-    it('Derives the result for ' + f.description, function () {
-      var actual = deriveUTXO(f.transactions)
+fixtures.forEach(function (f) {
+  test('Derives the result for ' + f.description, function (t) {
+    t.plan(1)
 
-      assert.deepEqual(f.expected, actual)
-    })
+    t.deepEqual(f.expected, deriveUTXO(f.transactions))
   })
 })
