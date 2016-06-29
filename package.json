@@ -1,6 +1,6 @@
 {
   "name": "utxo",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "UTXO derivation from a list of transactions",
   "author": "Daniel Cousens",
   "license": "ISC",
