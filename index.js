@@ -6,7 +6,7 @@ module.exports = function deriveUTXO (transactions) {
   for (var txId in transactions) {
     var transaction = transactions[txId]
 
-    // ignore double spends (and known invalid chains)
+    // drop double spends, first-seen only
     if (
       transaction.inputs.some(function (input) {
         return txIns[input.txId + input.vout] || droppedTxIds[input.txId]
