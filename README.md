@@ -47,5 +47,6 @@ let unspents = utxo(transactions)
 // }, ...]
 ```
 **NOTE**: Any 'double spends' are ignored, with priority given to first-seen.
+If `.outputs` is undefined,  an unspent is only `{ txId, vout }`.
 
 ## LICENSE [MIT](LICENSE)
