@@ -35,7 +35,7 @@ let transactions = {
 			},
 			...
 		],
-		// and so on
+		// etc
 	}
 }
 
