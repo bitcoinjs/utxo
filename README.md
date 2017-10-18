@@ -40,11 +40,11 @@ let transactions = {
 }
 
 let unspents = utxo(transactions)
-[{
-	"txId": "2c20ca6ca3a2af32d3ca0c6c1a60f6d3c00101342620a21f3622fc6faf2ddcda",
-	"vout": 0,
-	"script": "..."
-}, ...]
+// => [{
+//	"txId": "2c20ca6ca3a2af32d3ca0c6c1a60f6d3c00101342620a21f3622fc6faf2ddcda",
+//	"vout": 0,
+//	"script": "..."
+// }, ...]
 ```
 **NOTE**: Any 'double spends' are ignored, with priority given to first-seen.
 
