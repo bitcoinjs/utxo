@@ -22,7 +22,7 @@
     "bitcoin"
   ],
   "author": "Daniel Cousens",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "standard": "*",
     "tape": "^4.6.0"
